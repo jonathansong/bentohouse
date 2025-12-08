@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BentoHouse - 本托中餐厅</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .intro {
+            background: white;
+            padding: 3rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .intro h2 {
+            color: #c41e3a;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #c41e3a;
+            padding-bottom: 0.5rem;
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        .menu-section {
+            margin-top: 3rem;
+        }
+
+        .menu-section h2 {
+            color: #c41e3a;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .food-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .food-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .food-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+        }
+
+        .food-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .food-info {
+            padding: 1.5rem;
+        }
+
+        .food-info h3 {
+            color: #c41e3a;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .food-info p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .intro {
+                padding: 1.5rem;
+            }
+
+            .food-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🏮 BentoHouse 本托中餐厅 🏮</h1>
+        <p>传承中华美食文化，品味地道中国风味</p>
+        <p>Authentic Chinese Cuisine Experience</p>
+    </header>
+
+    <div class="container">
+        <section class="intro">
+            <h2>关于我们 About Us</h2>
+            <p>
+                欢迎来到本托中餐厅！我们是一家致力于传承和发扬中华传统美食文化的餐厅。自成立以来，我们始终坚持使用最新鲜的食材，遵循传统的烹饪工艺，为顾客呈现最地道的中国美食。
+            </p>
+            <p>
+                Welcome to BentoHouse! We are dedicated to preserving and promoting traditional Chinese culinary culture. Since our establishment, we have always insisted on using the freshest ingredients and following traditional cooking techniques to present the most authentic Chinese cuisine to our customers.
+            </p>
+            <p>
+                我们的厨师团队拥有数十年的烹饪经验，精通川菜、粤菜、鲁菜等多个菜系。无论是麻辣鲜香的川菜，还是清淡鲜美的粤菜，我们都能为您完美呈现。每一道菜品都经过精心烹制，追求色香味俱全的完美境界。
+            </p>
+            <p>
+                Our chef team has decades of cooking experience and is proficient in multiple Chinese cuisines including Sichuan, Cantonese, and Shandong styles. Whether it's spicy Sichuan dishes or light and delicious Cantonese cuisine, we can present them perfectly for you. Every dish is carefully prepared, pursuing the perfect combination of color, aroma, and taste.
+            </p>
+        </section>
+
+        <section class="menu-section">
+            <h2>特色菜品 Featured Dishes</h2>
+            
+            <div class="food-gallery">
+                <div class="food-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect fill='%23f4e4d7' width='600' height='400'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23c41e3a'%3E🍗%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23666'%3E宫保鸡丁%3C/text%3E%3C/svg%3E" alt="宫保鸡丁">
+                    <div class="food-info">
+                        <h3>宫保鸡丁</h3>
+                        <p>Kung Pao Chicken - 经典川菜，鸡肉鲜嫩，花生香脆，酸甜微辣，回味无穷。A classic Sichuan dish with tender chicken, crispy peanuts, and a perfect sweet and spicy flavor.</p>
+                    </div>
+                </div>
+
+                <div class="food-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect fill='%23f5deb3' width='600' height='400'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23c41e3a'%3E🦆%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23666'%3E北京烤鸭%3C/text%3E%3C/svg%3E" alt="北京烤鸭">
+                    <div class="food-info">
+                        <h3>北京烤鸭</h3>
+                        <p>Peking Duck - 皮酥肉嫩，色泽红润，配以葱丝、黄瓜和甜面酱，是中国名菜的代表。Crispy skin, tender meat, served with scallions, cucumber, and sweet bean sauce.</p>
+                    </div>
+                </div>
+
+                <div class="food-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect fill='%23ffe4e1' width='600' height='400'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23c41e3a'%3E🍲%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23666'%3E麻婆豆腐%3C/text%3E%3C/svg%3E" alt="麻婆豆腐">
+                    <div class="food-info">
+                        <h3>麻婆豆腐</h3>
+                        <p>Mapo Tofu - 麻辣鲜香，豆腐滑嫩，是四川最具代表性的菜品之一。Spicy and numbing, with silky tofu, one of Sichuan's most iconic dishes.</p>
+                    </div>
+                </div>
+
+                <div class="food-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect fill='%23fff8dc' width='600' height='400'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23c41e3a'%3E🥟%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23666'%3E小笼包%3C/text%3E%3C/svg%3E" alt="小笼包">
+                    <div class="food-info">
+                        <h3>小笼包</h3>
+                        <p>Xiaolongbao - 皮薄馅大，汤汁丰富，轻咬一口，鲜美的汤汁在口中迸发。Delicate dumplings with thin skin and rich broth, a Shanghai specialty.</p>
+                    </div>
+                </div>
+
+                <div class="food-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect fill='%23ffd7a8' width='600' height='400'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23c41e3a'%3E🥩%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23666'%3E糖醋里脊%3C/text%3E%3C/svg%3E" alt="糖醋里脊">
+                    <div class="food-info">
+                        <h3>糖醋里脊</h3>
+                        <p>Sweet and Sour Pork - 色泽金黄，外酥里嫩，酸甜适中，深受大众喜爱。Golden and crispy outside, tender inside, with a perfect sweet and sour balance.</p>
+                    </div>
+                </div>
+
+                <div class="food-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect fill='%23f0e68c' width='600' height='400'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23c41e3a'%3E🍚%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='%23666'%3E扬州炒饭%3C/text%3E%3C/svg%3E" alt="扬州炒饭">
+                    <div class="food-info">
+                        <h3>扬州炒饭</h3>
+                        <p>Yangzhou Fried Rice - 粒粒分明，色彩丰富，虾仁、火腿、鸡蛋完美融合。Perfectly separated grains with shrimp, ham, and eggs in harmony.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 BentoHouse Chinese Restaurant. All rights reserved.</p>
+        <div class="contact-info">
+            <p>📍 地址 Address: 123 Main Street, City Center</p>
+            <p>📞 电话 Phone: (555) 123-4567</p>
+            <p>⏰ 营业时间 Hours: 11:00 AM - 10:00 PM (Monday - Sunday)</p>
+        </div>
+    </footer>
+</body>
+</html>
