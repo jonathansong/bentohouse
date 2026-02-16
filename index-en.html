@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bento House - Chinese Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Bento House</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index-en.html" class="active">Home</a></li>
+                    <li><a href="menu-en.html">Menu</a></li>
+                    <li><a href="reservation-en.html">Reservation</a></li>
+                    <li class="language-switcher">
+                        <select class="lang-dropdown" onchange="window.location.href=this.value">
+                            <option value="index.html">🇳🇱 Nederlands</option>
+                            <option value="index-en.html" selected>🇬🇧 English</option>
+                            <option value="index-zh.html">🇨🇳 中文</option>
+                            <option value="index-fr.html">🇫🇷 Français</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section with Image Slider -->
+        <section class="hero">
+            <div class="hero-slider">
+                <div class="slide active">
+                    <img src="images/house/1.jpg" alt="Restaurant">
+                </div>
+                <div class="slide">
+                    <img src="images/house/3.jpg" alt="Restaurant">
+                </div>
+                <div class="slide">
+                    <img src="images/house/6.jpg" alt="Restaurant">
+                </div>
+                <div class="slide">
+                    <img src="images/house/16.jpg" alt="Restaurant">
+                </div>
+                <div class="slide">
+                    <img src="images/house/21.jpg" alt="Restaurant">
+                </div>
+                <div class="slide">
+                    <img src="images/house/31.JPG" alt="Restaurant">
+                </div>
+                <div class="hero-overlay">
+                    <h2>CHINESE RESTAURANT</h2>
+                    <p>Takeaway & Dine-in</p>
+                    <a href="menu-en.html" class="btn">View Our Menu</a>
+                </div>
+                <!-- Slider Navigation -->
+                <button class="slider-nav prev" onclick="changeSlide(-1)">&#8249;</button>
+                <button class="slider-nav next" onclick="changeSlide(1)">&#8250;</button>
+            </div>
+        </section>
+
+        <script>
+        // Image slider functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        let autoSlideInterval;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+            resetAutoSlide();
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(nextSlide, 4000);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+
+        // Start auto-advance slides every 4 seconds
+        startAutoSlide();
+        </script>
+
+        <!-- About Section -->
+        <section class="about">
+            <div class="container">
+                <h2>Welcome to Bento House</h2>
+                <p>
+                    Bento House is a restaurant where everything revolves around passion for food. 
+                    We work with fresh products and can therefore adjust the ingredients in the dishes 
+                    according to your needs. In the restaurant you can enjoy refined Chinese cuisine. 
+                    Whether it's a romantic dinner for two, a family dinner or a business meeting, 
+                    you can come to us.
+                </p>
+                <p>
+                    With extensive experience both in the kitchen and in the dining room, we will take care of you 
+                    down to the smallest details so that you not only leave with a full stomach but also 
+                    with a happy feeling.
+                </p>
+            </div>
+        </section>
+
+        <!-- Featured Items Section -->
+        <section class="featured-items">
+            <div class="container">
+                <h2>Our Specialties</h2>
+                
+                <!-- Starters -->
+                <h3 class="category-title">Starters</h3>
+                <div class="items-grid">
+                    <div class="item-card">
+                        <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=400" alt="Dim Sum">
+                        <h3>Dim Sum</h3>
+                        <p>Traditional steamed bites with various fillings</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="https://images.unsplash.com/photo-1526318896980-cf78c088247c?w=400" alt="Spring Rolls">
+                        <h3>Spring Rolls</h3>
+                        <p>Crispy spring rolls with delicious filling</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=400" alt="Shrimp Croquettes">
+                        <h3>Shrimp Croquettes</h3>
+                        <p>Crispy croquettes with shrimp filling</p>
+                    </div>
+                </div>
+
+                <!-- Bento Box -->
+                <h3 class="category-title">Bento Box</h3>
+                <div class="items-grid">
+                    <div class="item-card">
+                        <img src="images/dutch/9 Teriyaki Eend.jpg" alt="Teriyaki Duck">
+                        <h3>Teriyaki Duck</h3>
+                        <p>Delicious duck with teriyaki sauce</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/11 Kipschnitzel met currysaus.jpg" alt="Chicken Schnitzel with Curry Sauce">
+                        <h3>Chicken Schnitzel with Curry Sauce</h3>
+                        <p>Crispy chicken schnitzel with creamy curry sauce</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/12 Koe Loe Kip.jpg" alt="Sweet and Sour Chicken">
+                        <h3>Sweet and Sour Chicken</h3>
+                        <p>Chinese-style sweet and sour chicken</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/13 Gestoofd buikspek.jpg" alt="Braised Pork Belly">
+                        <h3>Braised Pork Belly</h3>
+                        <p>Tender braised pork</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/14 Kip in pikant satésaus.jpg" alt="Chicken in Spicy Satay Sauce">
+                        <h3>Chicken in Spicy Satay Sauce</h3>
+                        <p>Juicy chicken with spicy satay sauce</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/15 Gestoofd rundvlees.jpg" alt="Braised Beef">
+                        <h3>Braised Beef</h3>
+                        <p>Tender beef in flavorful sauce</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/16 Rundvlees met zwarte peppersaus.jpg" alt="Beef with Black Pepper Sauce">
+                        <h3>Beef with Black Pepper Sauce</h3>
+                        <p>Spicy beef with black pepper</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/17 Lamskotelet met currysaus.jpg" alt="Lamb Chop with Curry Sauce">
+                        <h3>Lamb Chop with Curry Sauce</h3>
+                        <p>Juicy lamb chop in curry sauce</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/18 Kipcurry.jpg" alt="Chicken Curry">
+                        <h3>Chicken Curry</h3>
+                        <p>Chicken in creamy curry with vegetables</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/19 Inktvis met zwarte peppersaus.jpg" alt="Squid with Black Pepper Sauce">
+                        <h3>Squid with Black Pepper Sauce</h3>
+                        <p>Fresh squid in spicy pepper sauce</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/20 Kikkerbilletjes met boter en look.jpg" alt="Frog Legs with Butter and Garlic">
+                        <h3>Frog Legs with Butter and Garlic</h3>
+                        <p>Tender frog legs in garlic butter</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/21 Gambas met pepper en zeezout.jpg" alt="Prawns with Pepper and Sea Salt">
+                        <h3>Prawns with Pepper and Sea Salt</h3>
+                        <p>Fresh prawns with pepper and sea salt</p>
+                    </div>
+                </div>
+
+                <!-- Rice Dish -->
+                <h3 class="category-title">Rice Dishes</h3>
+                <div class="items-grid">
+                    <div class="item-card">
+                        <img src="images/dutch/23 Teriyaki Eend.jpg" alt="Teriyaki Duck with Rice">
+                        <h3>Teriyaki Duck with Rice</h3>
+                        <p>Duck with teriyaki sauce and steamed rice</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/24 Teriyaki kip.jpg" alt="Teriyaki Chicken">
+                        <h3>Teriyaki Chicken with Rice</h3>
+                        <p>Grilled chicken in teriyaki sauce with rice</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/25 Kipschnitzel in currysaus.jpg" alt="Chicken Schnitzel in Curry Sauce">
+                        <h3>Chicken Schnitzel in Curry Sauce with Rice</h3>
+                        <p>Crispy chicken schnitzel with curry and rice</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/26 Koe Loe Kip.jpg" alt="Sweet and Sour Chicken with Rice">
+                        <h3>Sweet and Sour Chicken with Rice</h3>
+                        <p>Sweet and sour chicken with steamed rice</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/27 Gestoofd buikspek.jpg" alt="Braised Pork Belly with Rice">
+                        <h3>Braised Pork Belly with Rice</h3>
+                        <p>Tender braised pork with rice</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/28 Kip in pikant satésaus.jpg" alt="Chicken in Spicy Satay Sauce with Rice">
+                        <h3>Chicken in Spicy Satay Sauce with Rice</h3>
+                        <p>Satay chicken with steamed rice</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/29 Gestoofd rundvlees.jpg" alt="Braised Beef with Rice">
+                        <h3>Braised Beef with Rice</h3>
+                        <p>Tender beef with rice</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/30 Rundvlees met zwarte peppersaus.jpg" alt="Beef with Black Pepper Sauce with Rice">
+                        <h3>Beef with Black Pepper Sauce and Rice</h3>
+                        <p>Spicy beef with rice</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/31 Lamskotelet met currysaus.jpg" alt="Lamb Chop with Curry Sauce with Rice">
+                        <h3>Lamb Chop with Curry Sauce and Rice</h3>
+                        <p>Lamb chop in curry with rice</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/32 Kipcurry.jpg" alt="Chicken Curry with Rice">
+                        <h3>Chicken Curry with Rice</h3>
+                        <p>Creamy chicken curry with steamed rice</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/33 Inktvis met zwarte peppersaus.jpg" alt="Squid with Black Pepper Sauce with Rice">
+                        <h3>Squid with Black Pepper Sauce and Rice</h3>
+                        <p>Squid in pepper sauce with rice</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/34 Kikkerbilletjes met boter en look.jpg" alt="Frog Legs with Butter and Garlic with Rice">
+                        <h3>Frog Legs with Butter and Garlic and Rice</h3>
+                        <p>Frog legs in garlic butter with rice</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/35 Gambas met peeper en zeezout.jpg" alt="Prawns with Pepper and Sea Salt with Rice">
+                        <h3>Prawns with Pepper and Sea Salt and Rice</h3>
+                        <p>Prawns with rice</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Gallery -->
+        <section class="gallery">
+            <div class="container">
+                <h2>Atmosphere</h2>
+                <div class="gallery-grid">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600" alt="Restaurant interior">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600" alt="Table with dishes">
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=600" alt="Restaurant bar">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600" alt="Chef at work">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Tel: +32 9 398 06 96</p>
+                    <p>Email: bentohousegent@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Address</h3>
+                    <p>Oudburg 40 0001</p>
+                    <p>9000 Ghent</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Opening Hours</h3>
+                    <p>12:00 – 22:00</p>
+                    <p>Closed on Wednesday</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bento House | All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

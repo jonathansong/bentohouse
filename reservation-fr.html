@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation - Bento House</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Bento House</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index-fr.html">Accueil</a></li>
+                    <li><a href="menu-fr.html">Menu</a></li>
+                    <li><a href="reservation-fr.html" class="active">Réservation</a></li>
+                    <li class="language-switcher">
+                        <select class="lang-dropdown" onchange="window.location.href=this.value">
+                            <option value="reservation.html">🇳🇱 Nederlands</option>
+                            <option value="reservation-en.html">🇬🇧 English</option>
+                            <option value="reservation-zh.html">🇨🇳 中文</option>
+                            <option value="reservation-fr.html" selected>🇫🇷 Français</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="reservation-header">
+            <div class="container">
+                <h1>Réservation & Contact</h1>
+                <p>Réservez une table ou contactez-nous</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <h2>Informations de Contact</h2>
+                        
+                        <div class="info-block">
+                            <h3>📍 Adresse</h3>
+                            <p>Oudburg 40 0001</p>
+                            <p>9000 Gand, Belgique</p>
+                        </div>
+
+                        <div class="info-block">
+                            <h3>📞 Téléphone</h3>
+                            <p><a href="tel:+3293980696">+32 9 398 06 96</a></p>
+                        </div>
+
+                        <div class="info-block">
+                            <h3>✉️ Email</h3>
+                            <p><a href="mailto:bentohousegent@gmail.com">bentohousegent@gmail.com</a></p>
+                        </div>
+
+                        <div class="info-block">
+                            <h3>🕐 Horaires d'Ouverture</h3>
+                            <table class="hours-table">
+                                <tr>
+                                    <td>Lundi - Mardi:</td>
+                                    <td>12:00 - 22:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Mercredi:</td>
+                                    <td><strong>Fermé</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Jeudi - Dimanche:</td>
+                                    <td>12:00 - 22:00</td>
+                                </tr>
+                            </table>
+                            <p class="note"><em>Veuillez réserver le week-end.</em></p>
+                        </div>
+
+                        <div class="info-block">
+                            <h3>ℹ️ Numéro TVA</h3>
+                            <p>BE 0763.797.004</p>
+                        </div>
+
+                        <div class="info-block social">
+                            <h3>📱 Suivez-Nous</h3>
+                            <div class="social-links">
+                                <a href="https://www.facebook.com" target="_blank" class="social-btn">Facebook</a>
+                                <a href="https://www.instagram.com" target="_blank" class="social-btn">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reservation Form -->
+                    <div class="reservation-form">
+                        <h2>Réserver en Ligne</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Nom *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Numéro de Téléphone *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="date">Date *</label>
+                                    <input type="date" id="date" name="date" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="time">Heure *</label>
+                                    <input type="time" id="time" name="time" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="guests">Nombre de Personnes *</label>
+                                <select id="guests" name="guests" required>
+                                    <option value="">Sélectionner le nombre</option>
+                                    <option value="1">1 personne</option>
+                                    <option value="2">2 personnes</option>
+                                    <option value="3">3 personnes</option>
+                                    <option value="4">4 personnes</option>
+                                    <option value="5">5 personnes</option>
+                                    <option value="6">6 personnes</option>
+                                    <option value="7">7 personnes</option>
+                                    <option value="8">8 personnes</option>
+                                    <option value="more">Plus de 8 personnes</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Demandes Spéciales (optionnel)</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Par exemple : allergies, chaise haute, occasion spéciale..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Envoyer la Réservation</button>
+                        </form>
+                        <p class="form-note">* Champs obligatoires<br>
+                        Vous recevrez une confirmation par email ou téléphone.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <div class="container">
+                <h2>Nous Trouver</h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.0857845961994!2d3.7199844999999997!3d51.0476589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c373e2dddd3b99%3A0x6c1e1bc5e5c5e5e5!2sOudburg%2040%2C%209000%20Gent%2C%20Belgium!5e0!3m2!1sen!2snl!4v1234567890123!5m2!1sen!2snl" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Tél: +32 9 398 06 96</p>
+                    <p>Email: bentohousegent@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Adresse</h3>
+                    <p>Oudburg 40 0001</p>
+                    <p>9000 Gand</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Horaires d'Ouverture</h3>
+                    <p>12:00 – 22:00</p>
+                    <p>Fermé le mercredi</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bento House | Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form validation
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Veuillez réserver par téléphone au +32 9 398 06 96');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

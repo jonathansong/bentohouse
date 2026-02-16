@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Bento House</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Bento House</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html" class="active">Menu</a></li>
+                    <li><a href="reservation.html">Reservering</a></li>
+                    <li class="language-switcher">
+                        <select class="lang-dropdown" onchange="window.location.href=this.value">
+                            <option value="menu.html" selected>🇳🇱 Nederlands</option>
+                            <option value="menu-en.html">🇬🇧 English</option>
+                            <option value="menu-zh.html">🇨🇳 中文</option>
+                            <option value="menu-fr.html">🇫🇷 Français</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="menu-header">
+            <div class="container">
+                <h1>Ons Menu</h1>
+                <p>Ontdek onze heerlijke Chinese gerechten</p>
+            </div>
+        </section>
+
+        <section class="menu-content">
+            <div class="container">
+                <!-- Voorgerechten / Starters -->
+                <div class="menu-category">
+                    <h2>Voorgerechten</h2>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1587735243475-46d8a9e7f6f8?w=100" alt="Sojabonen" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>1. Sojabonen</h3>
+                                <p>Gestoomde edamame met zeezout</p>
+                            </div>
+                            <span class="price">€ 4,80</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=100" alt="Mini Loempia's" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>2. Mini Loempia's (vegetarisch)</h3>
+                                <p>Kleine krokante vegetarische loempia's</p>
+                            </div>
+                            <span class="price">€ 4,80</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=100" alt="Dumplings" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>3. Dumplings met Kip</h3>
+                                <p>Gestoomde dumplings gevuld met kip</p>
+                            </div>
+                            <span class="price">€ 5,80</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=100" alt="Takoyaki" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>4. Takoyaki (octopusballetjes)</h3>
+                                <p>Japanse octopusballetjes met bonitoschilfers</p>
+                            </div>
+                            <span class="price">€ 5,80</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1562967914-608f82629710?w=100" alt="Karaage Kip" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>5. Karaage Kip</h3>
+                                <p>Japanse gefrituurde kip stukjes</p>
+                            </div>
+                            <span class="price">€ 6,30</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=100" alt="Kippenpoten" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>6. Kippenpoten</h3>
+                                <p>Krokant gefrituurde kippenpoten</p>
+                            </div>
+                            <span class="price">€ 6,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=100" alt="Tempura Garnalen" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>7. Tempura Garnalen</h3>
+                                <p>Licht en krokant gefrituurd garnalen</p>
+                            </div>
+                            <span class="price">€ 6,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento Box -->
+                <div class="menu-category">
+                    <h2>Bento Box</h2>
+                    <p style="font-style: italic; margin-bottom: 15px;">Soep inbegrepen: pittige soep of tomatensoep</p>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <img src="images/dutch/9 Teriyaki Eend.jpg" alt="Teriyaki Eend" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>8. Geroosterde Eend met Teriyaki Saus</h3>
+                                <p>Heerlijke eend met teriyaki saus</p>
+                            </div>
+                            <span class="price">€ 21,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/10 Teriyaki kip.jpg" alt="Teriyaki Kip" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>9. Teriyaki Kip</h3>
+                                <p>Gegrilde kip in teriyaki saus</p>
+                            </div>
+                            <span class="price">€ 20,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/11 Kipschnitzel met currysaus.jpg" alt="Kipschnitzel met currysaus" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>10. Kipschnitzel met Currysaus</h3>
+                                <p>Krokante kipschnitzel met romige currysaus</p>
+                            </div>
+                            <span class="price">€ 21,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/12 Koe Loe Kip.jpg" alt="Koe Loe Kip" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>11. Krokante Zoetzure Kip</h3>
+                                <p>Zoetzure kip op Chinese wijze</p>
+                            </div>
+                            <span class="price">€ 21,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/13 Gestoofd buikspek.jpg" alt="Gestoofd buikspek" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>12. Gestoofd Buikspek</h3>
+                                <p>Mals gestoofd varkensvlees</p>
+                            </div>
+                            <span class="price">€ 20,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/13 Gestoofd buikspek.jpg" alt="Babi Pangang" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>13. Babi Pangang (Geroosterd Varkensvlees)</h3>
+                                <p>Indonesisch geroosterd varkensvlees</p>
+                            </div>
+                            <span class="price">€ 21,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/14 Kip in pikant satésaus.jpg" alt="Kip in pikant satésaus" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>14. Kip met Pikante Satésaus</h3>
+                                <p>Sappige kip met kruidige satésaus</p>
+                            </div>
+                            <span class="price">€ 20,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/20 Kikkerbilletjes met boter en look.jpg" alt="Kikkerbilletjes met boter en look" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>15. Kikkerbilletjes met Knoflookboter</h3>
+                                <p>Malse kikkerbilletjes in knoflookboter</p>
+                            </div>
+                            <span class="price">€ 23,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/15 Gestoofd rundvlees.jpg" alt="Gestoofd rundvlees" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>16. Tomaten Runderstoofpot</h3>
+                                <p>Malse rundvlees in smaakvolle tomatensaus</p>
+                            </div>
+                            <span class="price">€ 22,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/16 Rundvlees met zwarte peppersaus.jpg" alt="Rundvlees met zwarte peppersaus" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>17. Zwarte Peper Rundvlees Roerbak</h3>
+                                <p>Pittig rundvlees met zwarte peper</p>
+                            </div>
+                            <span class="price">€ 22,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/17 Lamskotelet met currysaus.jpg" alt="Lamskotelet met currysaus" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>18. Lamskoteletten in Currysaus</h3>
+                                <p>Sappige lamskoteletten in currysaus</p>
+                            </div>
+                            <span class="price">€ 27,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/18 Kipcurry.jpg" alt="Kipcurry" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>19. Kipcurry</h3>
+                                <p>Kip in romige curry met groenten</p>
+                            </div>
+                            <span class="price">€ 20,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/19 Inktvis met zwarte peppersaus.jpg" alt="Inktvis met zwarte peppersaus" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>20. Inktvis in Zwarte Pepersaus</h3>
+                                <p>Verse inktvis in pittige pepersaus</p>
+                            </div>
+                            <span class="price">€ 22,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/21 Gambas met pepper en zeezout.jpg" alt="Gambas met pepper en zeezout" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>21. Gambas met Zeezout en Peper</h3>
+                                <p>Verse gambas met peper en zeezout</p>
+                            </div>
+                            <span class="price">€ 24,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/22 Tofu.jpg" alt="Tofu in Zwarte Pepersaus" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>22. Tofu in Zwarte Pepersaus (Vegetarisch)</h3>
+                                <p>Pittige tofu met zwarte pepersaus</p>
+                            </div>
+                            <span class="price">€ 20,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=100" alt="Voorgerechten Box" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>23. Voorgerechten Box</h3>
+                                <p>Gevarieerde selectie voorgerechten</p>
+                            </div>
+                            <span class="price">€ 20,50</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rijstgerechten / Rice Dishes -->
+                <div class="menu-category">
+                    <h2>Rijstgerechten</h2>
+                    <p style="font-style: italic; margin-bottom: 15px;">Soep inbegrepen: pittige soep of tomatensoep<br>Supplement opties: 1) Kimchi €2,00 | 2) Zeewier €2,50</p>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <img src="images/dutch/23 Teriyaki Eend.jpg" alt="Teriyaki Eend met Rijst" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>24. Geroosterde Eend met Teriyaki Saus</h3>
+                                <p>Eend met teriyaki saus en gestoomde rijst</p>
+                            </div>
+                            <span class="price">€ 17,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/24 Teriyaki kip.jpg" alt="Teriyaki kip" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>25. Teriyaki Kip</h3>
+                                <p>Gegrilde kip in teriyaki saus met rijst</p>
+                            </div>
+                            <span class="price">€ 16,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/25 Kipschnitzel in currysaus.jpg" alt="Kipschnitzel in currysaus" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>26. Kipschnitzel met Currysaus</h3>
+                                <p>Krokante kipschnitzel met curry en rijst</p>
+                            </div>
+                            <span class="price">€ 17,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/26 Koe Loe Kip.jpg" alt="Koe Loe Kip met Rijst" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>27. Krokante Zoetzure Kip</h3>
+                                <p>Zoetzure kip met gestoomde rijst</p>
+                            </div>
+                            <span class="price">€ 17,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/27 Gestoofd buikspek.jpg" alt="Gestoofd buikspek met Rijst" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>28. Gestoofd Buikspek</h3>
+                                <p>Mals gestoofd varkensvlees met rijst</p>
+                            </div>
+                            <span class="price">€ 16,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/13 Gestoofd buikspek.jpg" alt="Babi Pangang met Rijst" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>29. Babi Pangang</h3>
+                                <p>Indonesisch geroosterd varkensvlees met rijst</p>
+                            </div>
+                            <span class="price">€ 17,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/28 Kip in pikant satésaus.jpg" alt="Kip in pikant satésaus met Rijst" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>30. Kip met Pikante Satésaus</h3>
+                                <p>Satékip met gestoomde rijst</p>
+                            </div>
+                            <span class="price">€ 16,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/34 Kikkerbilletjes met boter en look.jpg" alt="Kikkerbilletjes met boter en look met Rijst" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>31. Kikkerbilletjes met Knoflookboter</h3>
+                                <p>Kikkerbilletjes in knoflookboter met rijst</p>
+                            </div>
+                            <span class="price">€ 19,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/29 Gestoofd rundvlees.jpg" alt="Tomaten Runderstoofpot met Rijst" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>32. Tomaten Runderstoofpot</h3>
+                                <p>Malse rundvlees in tomatensaus met rijst</p>
+                            </div>
+                            <span class="price">€ 18,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/30 Rundvlees met zwarte peppersaus.jpg" alt="Rundvlees met zwarte peppersaus met Rijst" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>33. Zwarte Peper Rundvlees Roerbak</h3>
+                                <p>Pittig rundvlees met zwarte peper en rijst</p>
+                            </div>
+                            <span class="price">€ 18,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/31 Lamskotelet met currysaus.jpg" alt="Lamskotelet met currysaus met Rijst" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>34. Lamskoteletten in Currysaus</h3>
+                                <p>Lamskoteletten in curry met rijst</p>
+                            </div>
+                            <span class="price">€ 23,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/32 Kipcurry.jpg" alt="Kipcurry met Rijst" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>35. Kipcurry</h3>
+                                <p>Romige kipcurry met gestoomde rijst</p>
+                            </div>
+                            <span class="price">€ 16,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/33 Inktvis met zwarte peppersaus.jpg" alt="Inktvis met zwarte peppersaus met Rijst" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>36. Inktvis in Zwarte Pepersaus</h3>
+                                <p>Inktvis in pepersaus met rijst</p>
+                            </div>
+                            <span class="price">€ 18,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/35 Gambas met peeper en zeezout.jpg" alt="Gambas met peeper en zeezout met Rijst" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>37. Gambas met Zeezout en Peper</h3>
+                                <p>Gambas met rijst</p>
+                            </div>
+                            <span class="price">€ 20,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/22 Tofu.jpg" alt="Tofu in Zwarte Pepersaus met Rijst" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>38. Tofu in Zwarte Pepersaus (Vegetarisch)</h3>
+                                <p>Tofu in zwarte pepersaus met rijst</p>
+                            </div>
+                            <span class="price">€ 16,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dranken -->
+                <div class="menu-category">
+                    <h2>Dranken</h2>
+                    
+                    <h3 style="margin-top: 20px; margin-bottom: 10px; color: #c5a572;">Frisdranken</h3>
+                    <div class="menu-items" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px;">
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Cola</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Cola Zero</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Ice Tea</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Fanta</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Schweppes Tonic</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Appelsap</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Sinaasappelsap</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Spa Plat</h3>
+                            </div>
+                            <span class="price">€ 2,50</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Spa Bruis</h3>
+                            </div>
+                            <span class="price">€ 2,50</span>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 20px; margin-bottom: 10px; color: #c5a572;">Wijn — Wit / Rosé / Rood</h3>
+                    <div class="menu-items" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px;">
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Glas</h3>
+                            </div>
+                            <span class="price">€ 4,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">1/4 Liter</h3>
+                            </div>
+                            <span class="price">€ 7,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">1/2 Liter</h3>
+                            </div>
+                            <span class="price">€ 13,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Fles</h3>
+                            </div>
+                            <span class="price">€ 17,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Lychee Wijn</h3>
+                            </div>
+                            <span class="price">€ 4,50</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Pruim Wijn</h3>
+                            </div>
+                            <span class="price">€ 4,50</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Saké</h3>
+                            </div>
+                            <span class="price">€ 6,50</span>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 20px; margin-bottom: 10px; color: #c5a572;">Bieren</h3>
+                    <div class="menu-items" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px;">
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Jupiler</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Leffe Blond</h3>
+                            </div>
+                            <span class="price">€ 4,50</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Leffe Bruin</h3>
+                            </div>
+                            <span class="price">€ 4,50</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Duvel</h3>
+                            </div>
+                            <span class="price">€ 4,50</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Kriek</h3>
+                            </div>
+                            <span class="price">€ 4,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Qingdao</h3>
+                            </div>
+                            <span class="price">€ 4,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Kirin</h3>
+                            </div>
+                            <span class="price">€ 4,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Sapporo</h3>
+                            </div>
+                            <span class="price">€ 4,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Asahi</h3>
+                            </div>
+                            <span class="price">€ 4,00</span>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 20px; margin-bottom: 10px; color: #c5a572;">Warme Dranken</h3>
+                    <div class="menu-items" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px;">
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Lipton Thee</h3>
+                            </div>
+                            <span class="price">€ 2,80</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Chinese Jasmijn Thee</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Japanse Groene Thee</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Roasted Rice Thee</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Verse Gember Thee</h3>
+                            </div>
+                            <span class="price">€ 3,80</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Verse Muntthee</h3>
+                            </div>
+                            <span class="price">€ 3,80</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Koffie</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Espresso</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">Cappuccino</h3>
+                            </div>
+                            <span class="price">€ 3,20</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Tel: +32 9 398 06 96</p>
+                    <p>Email: bentohousegent@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Adres</h3>
+                    <p>Oudburg 40 0001</p>
+                    <p>9000 Gent</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Openingsuren</h3>
+                    <p>12:00 – 22:00</p>
+                    <p>Gesloten op woensdag</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bento House | Alle rechten voorbehouden</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

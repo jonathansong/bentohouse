@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>菜单 - 便当屋</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>便当屋 Bento House</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index-zh.html">首页</a></li>
+                    <li><a href="menu-zh.html" class="active">菜单</a></li>
+                    <li><a href="reservation-zh.html">预订</a></li>
+                    <li class="language-switcher">
+                        <select class="lang-dropdown" onchange="window.location.href=this.value">
+                            <option value="menu.html">🇳🇱 Nederlands</option>
+                            <option value="menu-en.html">🇬🇧 English</option>
+                            <option value="menu-zh.html" selected>🇨🇳 中文</option>
+                            <option value="menu-fr.html">🇫🇷 Français</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="menu-header">
+            <div class="container">
+                <h1>我们的菜单</h1>
+                <p>探索我们美味的中式菜肴</p>
+            </div>
+        </section>
+
+        <section class="menu-content">
+            <div class="container">
+                <!-- Starters -->
+                <div class="menu-category">
+                    <h2>开胃菜</h2>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1587735243475-46d8a9e7f6f8?w=100" alt="毛豆" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>1. 毛豆</h3>
+                                <p>海盐蒸毛豆</p>
+                            </div>
+                            <span class="price">€ 4,80</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=100" alt="迷你春卷" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>2. 迷你春卷（素食）</h3>
+                                <p>小巧香脆素食春卷</p>
+                            </div>
+                            <span class="price">€ 4,80</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=100" alt="鸡肉饺子" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>3. 鸡肉饺子</h3>
+                                <p>鸡肉馅蒸饺</p>
+                            </div>
+                            <span class="price">€ 5,80</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=100" alt="章鱼烧" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>4. 章鱼烧</h3>
+                                <p>日式章鱼小丸子配鲣鱼片</p>
+                            </div>
+                            <span class="price">€ 5,80</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1562967914-608f82629710?w=100" alt="唐扬炸鸡" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>5. 唐扬炸鸡</h3>
+                                <p>日式炸鸡块</p>
+                            </div>
+                            <span class="price">€ 6,30</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=100" alt="鸡腿" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>6. 鸡腿</h3>
+                                <p>香脆炸鸡腿</p>
+                            </div>
+                            <span class="price">€ 6,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=100" alt="天妇罗虾" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>7. 天妇罗虾</h3>
+                                <p>轻盈酥脆裹衣虾</p>
+                            </div>
+                            <span class="price">€ 6,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento Box -->
+                <div class="menu-category">
+                    <h2>便当盒</h2>
+                    <p style="font-style: italic; margin-bottom: 15px;">包含汤品：香辣汤或番茄汤</p>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <img src="images/dutch/9 Teriyaki Eend.jpg" alt="照烧烤鸭" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>8. 照烧烤鸭</h3>
+                                <p>美味鸭肉配照烧酱</p>
+                            </div>
+                            <span class="price">€ 21,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/10 Teriyaki kip.jpg" alt="照烧鸡" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>9. 照烧鸡</h3>
+                                <p>烤鸡肉配照烧酱</p>
+                            </div>
+                            <span class="price">€ 20,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/11 Kipschnitzel met currysaus.jpg" alt="咖喱鸡排" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>10. 咖喱鸡排</h3>
+                                <p>香脆鸡排配香浓咖喱酱</p>
+                            </div>
+                            <span class="price">€ 21,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/12 Koe Loe Kip.jpg" alt="香脆糖醋鸡" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>11. 香脆糖醋鸡</h3>
+                                <p>中式糖醋鸡</p>
+                            </div>
+                            <span class="price">€ 21,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/13 Gestoofd buikspek.jpg" alt="红烧五花肉" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>12. 红烧五花肉</h3>
+                                <p>嫩滑红烧猪肉</p>
+                            </div>
+                            <span class="price">€ 20,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/13 Gestoofd buikspek.jpg" alt="印尼烤猪肉" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>13. 印尼烤猪肉</h3>
+                                <p>印尼风味烤猪肉</p>
+                            </div>
+                            <span class="price">€ 21,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/14 Kip in pikant satésaus.jpg" alt="香辣沙爹鸡" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>14. 香辣沙爹鸡</h3>
+                                <p>多汁鸡肉配香辣沙爹酱</p>
+                            </div>
+                            <span class="price">€ 20,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/20 Kikkerbilletjes met boter en look.jpg" alt="蒜香黄油牛蛙" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>15. 蒜香黄油牛蛙</h3>
+                                <p>嫩滑牛蛙配蒜香黄油</p>
+                            </div>
+                            <span class="price">€ 23,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/15 Gestoofd rundvlees.jpg" alt="番茄牛肉煲" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>16. 番茄牛肉煲</h3>
+                                <p>嫩滑牛肉配美味番茄酱汁</p>
+                            </div>
+                            <span class="price">€ 22,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/16 Rundvlees met zwarte peppersaus.jpg" alt="黑椒炒牛肉" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>17. 黑椒炒牛肉</h3>
+                                <p>香辣黑椒牛肉</p>
+                            </div>
+                            <span class="price">€ 22,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/17 Lamskotelet met currysaus.jpg" alt="咖喱羊排" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>18. 咖喱羊排</h3>
+                                <p>多汁羊排配咖喱酱</p>
+                            </div>
+                            <span class="price">€ 27,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/18 Kipcurry.jpg" alt="咖喱鸡" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>19. 咖喱鸡</h3>
+                                <p>鸡肉配香浓咖喱和蔬菜</p>
+                            </div>
+                            <span class="price">€ 20,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/19 Inktvis met zwarte peppersaus.jpg" alt="黑椒鱿鱼" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>20. 黑椒鱿鱼</h3>
+                                <p>新鲜鱿鱼配香辣黑椒酱</p>
+                            </div>
+                            <span class="price">€ 22,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/21 Gambas met pepper en zeezout.jpg" alt="椒盐大虾" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>21. 椒盐大虾</h3>
+                                <p>新鲜大虾配胡椒海盐</p>
+                            </div>
+                            <span class="price">€ 24,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/22 Tofu.jpg" alt="黑椒豆腐" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>22. 黑椒豆腐（素食）</h3>
+                                <p>香辣黑椒豆腐</p>
+                            </div>
+                            <span class="price">€ 20,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=100" alt="开胃菜拼盘" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>23. 开胃菜拼盘</h3>
+                                <p>多样化开胃菜组合</p>
+                            </div>
+                            <span class="price">€ 20,50</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rice Dishes -->
+                <div class="menu-category">
+                    <h2>米饭套餐</h2>
+                    <p style="font-style: italic; margin-bottom: 15px;">包含汤品：香辣汤或番茄汤<br>附加选项：1) 泡菜 €2,00 | 2) 海带 €2,50</p>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <img src="images/dutch/23 Teriyaki Eend.jpg" alt="照烧鸭饭" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>24. 照烧烤鸭饭</h3>
+                                <p>鸭肉配照烧酱和蒸米饭</p>
+                            </div>
+                            <span class="price">€ 17,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/24 Teriyaki kip.jpg" alt="照烧鸡饭" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>25. 照烧鸡饭</h3>
+                                <p>烤鸡配照烧酱和米饭</p>
+                            </div>
+                            <span class="price">€ 16,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/25 Kipschnitzel in currysaus.jpg" alt="咖喱鸡排饭" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>26. 咖喱鸡排饭</h3>
+                                <p>香脆鸡排配咖喱和米饭</p>
+                            </div>
+                            <span class="price">€ 17,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/26 Koe Loe Kip.jpg" alt="香脆糖醋鸡饭" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>27. 香脆糖醋鸡饭</h3>
+                                <p>糖醋鸡配蒸米饭</p>
+                            </div>
+                            <span class="price">€ 17,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/27 Gestoofd buikspek.jpg" alt="红烧五花肉饭" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>28. 红烧五花肉饭</h3>
+                                <p>嫩滑红烧猪肉配米饭</p>
+                            </div>
+                            <span class="price">€ 16,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/13 Gestoofd buikspek.jpg" alt="印尼烤猪肉饭" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>29. 印尼烤猪肉饭</h3>
+                                <p>印尼风味烤猪肉配米饭</p>
+                            </div>
+                            <span class="price">€ 17,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/28 Kip in pikant satésaus.jpg" alt="沙爹鸡饭" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>30. 香辣沙爹鸡饭</h3>
+                                <p>沙爹鸡配蒸米饭</p>
+                            </div>
+                            <span class="price">€ 16,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/34 Kikkerbilletjes met boter en look.jpg" alt="蒜香牛蛙饭" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>31. 蒜香黄油牛蛙饭</h3>
+                                <p>牛蛙配蒜香黄油和米饭</p>
+                            </div>
+                            <span class="price">€ 19,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/29 Gestoofd rundvlees.jpg" alt="番茄牛肉煲饭" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>32. 番茄牛肉煲饭</h3>
+                                <p>嫩滑牛肉配番茄酱汁和米饭</p>
+                            </div>
+                            <span class="price">€ 18,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/30 Rundvlees met zwarte peppersaus.jpg" alt="黑椒炒牛肉饭" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>33. 黑椒炒牛肉饭</h3>
+                                <p>香辣黑椒牛肉配米饭</p>
+                            </div>
+                            <span class="price">€ 18,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/31 Lamskotelet met currysaus.jpg" alt="咖喱羊排饭" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>34. 咖喱羊排饭</h3>
+                                <p>羊排配咖喱酱和米饭</p>
+                            </div>
+                            <span class="price">€ 23,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/32 Kipcurry.jpg" alt="咖喱鸡饭" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>35. 咖喱鸡饭</h3>
+                                <p>香浓咖喱鸡配蒸米饭</p>
+                            </div>
+                            <span class="price">€ 16,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/33 Inktvis met zwarte peppersaus.jpg" alt="黑椒鱿鱼饭" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>36. 黑椒鱿鱼饭</h3>
+                                <p>鱿鱼配黑椒酱和米饭</p>
+                            </div>
+                            <span class="price">€ 18,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/35 Gambas met peeper en zeezout.jpg" alt="椒盐大虾饭" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>37. 椒盐大虾饭</h3>
+                                <p>大虾配米饭</p>
+                            </div>
+                            <span class="price">€ 20,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <img src="images/dutch/22 Tofu.jpg" alt="黑椒豆腐饭" class="menu-item-img">
+                            <div class="item-info">
+                                <h3>38. 黑椒豆腐饭（素食）</h3>
+                                <p>黑椒豆腐配米饭</p>
+                            </div>
+                            <span class="price">€ 16,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chinese Special Dishes -->
+                <div class="menu-category">
+                    <h2>中国特色菜</h2>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>酸菜鱼</h3>
+                                <p>经典川菜，鱼片配酸菜</p>
+                            </div>
+                            <span class="price">€ 25,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>剁椒鱼头</h3>
+                                <p>湖南名菜，鱼头配剁椒</p>
+                            </div>
+                            <span class="price">€ 20,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>椒盐田鸡腿</h3>
+                                <p>椒盐调味的田鸡腿</p>
+                            </div>
+                            <span class="price">€ 19,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>麻婆豆腐</h3>
+                                <p>经典川菜，麻辣豆腐</p>
+                            </div>
+                            <span class="price">€ 16,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>水煮鱼</h3>
+                                <p>麻辣水煮鱼片</p>
+                            </div>
+                            <span class="price">€ 25,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>椒盐大虾</h3>
+                                <p>椒盐调味的大虾</p>
+                            </div>
+                            <span class="price">€ 20,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>咸蛋黄焗大虾</h3>
+                                <p>咸蛋黄烹制的大虾</p>
+                            </div>
+                            <span class="price">€ 22,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>辣子鸡</h3>
+                                <p>四川风味辣子鸡丁</p>
+                            </div>
+                            <span class="price">€ 20,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>红烧茄子</h3>
+                                <p>经典家常红烧茄子</p>
+                            </div>
+                            <span class="price">€ 16,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>虾皮粉丝炒大白菜</h3>
+                                <p>虾皮粉丝炒白菜</p>
+                            </div>
+                            <span class="price">€ 16,00</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>黑椒肥牛</h3>
+                                <p>黑胡椒调味的肥牛</p>
+                            </div>
+                            <span class="price">€ 18,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>西红柿炖牛肉</h3>
+                                <p>番茄炖牛肉</p>
+                            </div>
+                            <span class="price">€ 18,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>红烧肉</h3>
+                                <p>经典红烧五花肉</p>
+                            </div>
+                            <span class="price">€ 16,50</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h3>酱拌鸡</h3>
+                                <p>酱汁拌鸡肉</p>
+                            </div>
+                            <span class="price">€ 16,50</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drinks -->
+                <div class="menu-category">
+                    <h2>饮品</h2>
+                    
+                    <h3 style="margin-top: 20px; margin-bottom: 10px; color: #c5a572;">软饮料</h3>
+                    <div class="menu-items" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px;">
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">可乐</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">零度可乐</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">冰茶</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">芬达</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">汤力水</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">苹果汁</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">橙汁</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">普通矿泉水</h3>
+                            </div>
+                            <span class="price">€ 2,50</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">气泡矿泉水</h3>
+                            </div>
+                            <span class="price">€ 2,50</span>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 20px; margin-bottom: 10px; color: #c5a572;">葡萄酒 — 白/桃红/红</h3>
+                    <div class="menu-items" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px;">
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">杯装</h3>
+                            </div>
+                            <span class="price">€ 4,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">1/4 升</h3>
+                            </div>
+                            <span class="price">€ 7,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">1/2 升</h3>
+                            </div>
+                            <span class="price">€ 13,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">整瓶</h3>
+                            </div>
+                            <span class="price">€ 17,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">荔枝酒</h3>
+                            </div>
+                            <span class="price">€ 4,50</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">梅子酒</h3>
+                            </div>
+                            <span class="price">€ 4,50</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">清酒</h3>
+                            </div>
+                            <span class="price">€ 6,50</span>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 20px; margin-bottom: 10px; color: #c5a572;">啤酒</h3>
+                    <div class="menu-items" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px;">
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">时代啤酒</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">乐福金啤</h3>
+                            </div>
+                            <span class="price">€ 4,50</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">乐福棕啤</h3>
+                            </div>
+                            <span class="price">€ 4,50</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">督威啤酒</h3>
+                            </div>
+                            <span class="price">€ 4,50</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">樱桃啤酒</h3>
+                            </div>
+                            <span class="price">€ 4,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">青岛啤酒</h3>
+                            </div>
+                            <span class="price">€ 4,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">麒麟啤酒</h3>
+                            </div>
+                            <span class="price">€ 4,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">札幌啤酒</h3>
+                            </div>
+                            <span class="price">€ 4,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">朝日啤酒</h3>
+                            </div>
+                            <span class="price">€ 4,00</span>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 20px; margin-bottom: 10px; color: #c5a572;">热饮</h3>
+                    <div class="menu-items" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px;">
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">立顿茶</h3>
+                            </div>
+                            <span class="price">€ 2,80</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">中国茉莉花茶</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">日本绿茶</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">玄米茶</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">鲜姜茶</h3>
+                            </div>
+                            <span class="price">€ 3,80</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">鲜薄荷茶</h3>
+                            </div>
+                            <span class="price">€ 3,80</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">咖啡</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">浓缩咖啡</h3>
+                            </div>
+                            <span class="price">€ 3,00</span>
+                        </div>
+                        <div class="menu-item" style="border: none; padding: 5px 10px;">
+                            <div class="item-info">
+                                <h3 style="font-size: 1rem;">卡布奇诺</h3>
+                            </div>
+                            <span class="price">€ 3,20</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>联系方式</h3>
+                    <p>电话: +32 9 398 06 96</p>
+                    <p>邮箱: bentohousegent@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>地址</h3>
+                    <p>Oudburg 40 0001</p>
+                    <p>9000 根特</p>
+                </div>
+                <div class="footer-section">
+                    <h3>营业时间</h3>
+                    <p>12:00 – 22:00</p>
+                    <p>周三休息</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 便当屋 Bento House | 版权所有</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

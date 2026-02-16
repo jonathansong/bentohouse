@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>预订 - 便当屋</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>便当屋 Bento House</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index-zh.html">首页</a></li>
+                    <li><a href="menu-zh.html">菜单</a></li>
+                    <li><a href="reservation-zh.html" class="active">预订</a></li>
+                    <li class="language-switcher">
+                        <select class="lang-dropdown" onchange="window.location.href=this.value">
+                            <option value="reservation.html">🇳🇱 Nederlands</option>
+                            <option value="reservation-en.html">🇬🇧 English</option>
+                            <option value="reservation-zh.html" selected>🇨🇳 中文</option>
+                            <option value="reservation-fr.html">🇫🇷 Français</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="reservation-header">
+            <div class="container">
+                <h1>预订与联系</h1>
+                <p>预订座位或联系我们</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <h2>联系信息</h2>
+                        
+                        <div class="info-block">
+                            <h3>📍 地址</h3>
+                            <p>Oudburg 40 0001</p>
+                            <p>9000 根特，比利时</p>
+                        </div>
+
+                        <div class="info-block">
+                            <h3>📞 电话</h3>
+                            <p><a href="tel:+3293980696">+32 9 398 06 96</a></p>
+                        </div>
+
+                        <div class="info-block">
+                            <h3>✉️ 邮箱</h3>
+                            <p><a href="mailto:bentohousegent@gmail.com">bentohousegent@gmail.com</a></p>
+                        </div>
+
+                        <div class="info-block">
+                            <h3>🕐 营业时间</h3>
+                            <table class="hours-table">
+                                <tr>
+                                    <td>周一至周二:</td>
+                                    <td>12:00 - 22:00</td>
+                                </tr>
+                                <tr>
+                                    <td>周三:</td>
+                                    <td><strong>休息</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>周四至周日:</td>
+                                    <td>12:00 - 22:00</td>
+                                </tr>
+                            </table>
+                            <p class="note"><em>周末请提前预订。</em></p>
+                        </div>
+
+                        <div class="info-block">
+                            <h3>ℹ️ 增值税号</h3>
+                            <p>BE 0763.797.004</p>
+                        </div>
+
+                        <div class="info-block social">
+                            <h3>📱 关注我们</h3>
+                            <div class="social-links">
+                                <a href="https://www.facebook.com" target="_blank" class="social-btn">Facebook</a>
+                                <a href="https://www.instagram.com" target="_blank" class="social-btn">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reservation Form -->
+                    <div class="reservation-form">
+                        <h2>在线预订</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">姓名 *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">邮箱 *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">电话号码 *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="date">日期 *</label>
+                                    <input type="date" id="date" name="date" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="time">时间 *</label>
+                                    <input type="time" id="time" name="time" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="guests">人数 *</label>
+                                <select id="guests" name="guests" required>
+                                    <option value="">请选择人数</option>
+                                    <option value="1">1人</option>
+                                    <option value="2">2人</option>
+                                    <option value="3">3人</option>
+                                    <option value="4">4人</option>
+                                    <option value="5">5人</option>
+                                    <option value="6">6人</option>
+                                    <option value="7">7人</option>
+                                    <option value="8">8人</option>
+                                    <option value="more">8人以上</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">特殊要求（可选）</label>
+                                <textarea id="message" name="message" rows="4" placeholder="例如：过敏原、儿童座椅、特殊场合..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">提交预订</button>
+                        </form>
+                        <p class="form-note">* 必填项<br>
+                        您将通过电子邮件或电话收到确认。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <div class="container">
+                <h2>找到我们</h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.0857845961994!2d3.7199844999999997!3d51.0476589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c373e2dddd3b99%3A0x6c1e1bc5e5c5e5e5!2sOudburg%2040%2C%209000%20Gent%2C%20Belgium!5e0!3m2!1sen!2snl!4v1234567890123!5m2!1sen!2snl" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>联系方式</h3>
+                    <p>电话: +32 9 398 06 96</p>
+                    <p>邮箱: bentohousegent@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>地址</h3>
+                    <p>Oudburg 40 0001</p>
+                    <p>9000 根特</p>
+                </div>
+                <div class="footer-section">
+                    <h3>营业时间</h3>
+                    <p>12:00 – 22:00</p>
+                    <p>周三休息</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 便当屋 Bento House | 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form validation
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('请致电 +32 9 398 06 96 进行预订');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

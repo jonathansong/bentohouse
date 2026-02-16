@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>便当屋 - 中餐馆</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>便当屋 Bento House</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index-zh.html" class="active">首页</a></li>
+                    <li><a href="menu-zh.html">菜单</a></li>
+                    <li><a href="reservation-zh.html">预订</a></li>
+                    <li class="language-switcher">
+                        <select class="lang-dropdown" onchange="window.location.href=this.value">
+                            <option value="index.html">🇳🇱 Nederlands</option>
+                            <option value="index-en.html">🇬🇧 English</option>
+                            <option value="index-zh.html" selected>🇨🇳 中文</option>
+                            <option value="index-fr.html">🇫🇷 Français</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section with Image Slider -->
+        <section class="hero">
+            <div class="hero-slider">
+                <div class="slide active">
+                    <img src="images/house/1.jpg" alt="餐厅">
+                </div>
+                <div class="slide">
+                    <img src="images/house/3.jpg" alt="餐厅">
+                </div>
+                <div class="slide">
+                    <img src="images/house/6.jpg" alt="餐厅">
+                </div>
+                <div class="slide">
+                    <img src="images/house/16.jpg" alt="餐厅">
+                </div>
+                <div class="slide">
+                    <img src="images/house/21.jpg" alt="餐厅">
+                </div>
+                <div class="slide">
+                    <img src="images/house/31.JPG" alt="餐厅">
+                </div>
+                <div class="hero-overlay">
+                    <h2>中餐馆</h2>
+                    <p>外卖 & 堂食</p>
+                    <a href="menu-zh.html" class="btn">查看菜单</a>
+                </div>
+                <!-- Slider Navigation -->
+                <button class="slider-nav prev" onclick="changeSlide(-1)">&#8249;</button>
+                <button class="slider-nav next" onclick="changeSlide(1)">&#8250;</button>
+            </div>
+        </section>
+
+        <script>
+        // Image slider functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        let autoSlideInterval;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+            resetAutoSlide();
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(nextSlide, 4000);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+
+        // Start auto-advance slides every 4 seconds
+        startAutoSlide();
+        </script>
+
+        <!-- About Section -->
+        <section class="about">
+            <div class="container">
+                <h2>欢迎光临便当屋</h2>
+                <p>
+                    便当屋是一家以对美食充满热情为核心的餐厅。
+                    我们使用新鲜食材，可以根据您的需求调整菜品中的配料。
+                    在我们的餐厅，您可以品尝到精致的中国菜。
+                    无论是浪漫的双人晚餐、家庭聚餐还是商务会议，我们都欢迎您的光临。
+                </p>
+                <p>
+                    凭借在厨房和餐厅服务方面的丰富经验，我们会照顾到最细微的细节，
+                    让您不仅能吃得饱饱的，还能带着愉快的心情回家。
+                </p>
+            </div>
+        </section>
+
+        <!-- Featured Items Section -->
+        <section class="featured-items">
+            <div class="container">
+                <h2>我们的特色菜</h2>
+                
+                <!-- Starters -->
+                <h3 class="category-title">开胃菜</h3>
+                <div class="items-grid">
+                    <div class="item-card">
+                        <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=400" alt="点心">
+                        <h3>点心</h3>
+                        <p>传统蒸点心，多种馅料</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="https://images.unsplash.com/photo-1526318896980-cf78c088247c?w=400" alt="春卷">
+                        <h3>春卷</h3>
+                        <p>香脆春卷，美味馅料</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=400" alt="虾球">
+                        <h3>虾球</h3>
+                        <p>香脆虾球，虾肉馅</p>
+                    </div>
+                </div>
+
+                <!-- Bento Box -->
+                <h3 class="category-title">便当盒</h3>
+                <div class="items-grid">
+                    <div class="item-card">
+                        <img src="images/dutch/9 Teriyaki Eend.jpg" alt="照烧鸭">
+                        <h3>照烧鸭</h3>
+                        <p>美味鸭肉配照烧酱</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/11 Kipschnitzel met currysaus.jpg" alt="咖喱鸡排">
+                        <h3>咖喱鸡排</h3>
+                        <p>香脆鸡排配香浓咖喱酱</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/12 Koe Loe Kip.jpg" alt="咕噜鸡">
+                        <h3>咕噜鸡</h3>
+                        <p>中式糖醋鸡</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/13 Gestoofd buikspek.jpg" alt="红烧五花肉">
+                        <h3>红烧五花肉</h3>
+                        <p>嫩滑红烧猪肉</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/14 Kip in pikant satésaus.jpg" alt="沙爹鸡">
+                        <h3>香辣沙爹鸡</h3>
+                        <p>多汁鸡肉配香辣沙爹酱</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/15 Gestoofd rundvlees.jpg" alt="红烧牛肉">
+                        <h3>红烧牛肉</h3>
+                        <p>嫩滑牛肉配美味酱汁</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/16 Rundvlees met zwarte peppersaus.jpg" alt="黑椒牛肉">
+                        <h3>黑椒牛肉</h3>
+                        <p>香辣黑椒牛肉</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/17 Lamskotelet met currysaus.jpg" alt="咖喱羊排">
+                        <h3>咖喱羊排</h3>
+                        <p>多汁羊排配咖喱酱</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/18 Kipcurry.jpg" alt="咖喱鸡">
+                        <h3>咖喱鸡</h3>
+                        <p>鸡肉配香浓咖喱和蔬菜</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/19 Inktvis met zwarte peppersaus.jpg" alt="黑椒鱿鱼">
+                        <h3>黑椒鱿鱼</h3>
+                        <p>新鲜鱿鱼配香辣黑椒酱</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/20 Kikkerbilletjes met boter en look.jpg" alt="蒜香牛蛙">
+                        <h3>蒜香黄油牛蛙</h3>
+                        <p>嫩滑牛蛙配蒜香黄油</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/21 Gambas met pepper en zeezout.jpg" alt="椒盐大虾">
+                        <h3>椒盐大虾</h3>
+                        <p>新鲜大虾配胡椒海盐</p>
+                    </div>
+                </div>
+
+                <!-- Rice Dish -->
+                <h3 class="category-title">米饭套餐</h3>
+                <div class="items-grid">
+                    <div class="item-card">
+                        <img src="images/dutch/23 Teriyaki Eend.jpg" alt="照烧鸭饭">
+                        <h3>照烧鸭饭</h3>
+                        <p>鸭肉配照烧酱和蒸米饭</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/24 Teriyaki kip.jpg" alt="照烧鸡饭">
+                        <h3>照烧鸡饭</h3>
+                        <p>烤鸡配照烧酱和米饭</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/25 Kipschnitzel in currysaus.jpg" alt="咖喱鸡排饭">
+                        <h3>咖喱鸡排饭</h3>
+                        <p>香脆鸡排配咖喱和米饭</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/26 Koe Loe Kip.jpg" alt="咕噜鸡饭">
+                        <h3>咕噜鸡饭</h3>
+                        <p>糖醋鸡配蒸米饭</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/27 Gestoofd buikspek.jpg" alt="红烧五花肉饭">
+                        <h3>红烧五花肉饭</h3>
+                        <p>嫩滑红烧猪肉配米饭</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/28 Kip in pikant satésaus.jpg" alt="沙爹鸡饭">
+                        <h3>香辣沙爹鸡饭</h3>
+                        <p>沙爹鸡配蒸米饭</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/29 Gestoofd rundvlees.jpg" alt="红烧牛肉饭">
+                        <h3>红烧牛肉饭</h3>
+                        <p>嫩滑牛肉配米饭</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/30 Rundvlees met zwarte peppersaus.jpg" alt="黑椒牛肉饭">
+                        <h3>黑椒牛肉饭</h3>
+                        <p>香辣牛肉配米饭</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/31 Lamskotelet met currysaus.jpg" alt="咖喱羊排饭">
+                        <h3>咖喱羊排饭</h3>
+                        <p>羊排配咖喱和米饭</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/32 Kipcurry.jpg" alt="咖喱鸡饭">
+                        <h3>咖喱鸡饭</h3>
+                        <p>香浓咖喱鸡配蒸米饭</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/33 Inktvis met zwarte peppersaus.jpg" alt="黑椒鱿鱼饭">
+                        <h3>黑椒鱿鱼饭</h3>
+                        <p>鱿鱼配黑椒酱和米饭</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/34 Kikkerbilletjes met boter en look.jpg" alt="蒜香牛蛙饭">
+                        <h3>蒜香黄油牛蛙饭</h3>
+                        <p>牛蛙配蒜香黄油和米饭</p>
+                    </div>
+                    <div class="item-card">
+                        <img src="images/dutch/35 Gambas met peeper en zeezout.jpg" alt="椒盐大虾饭">
+                        <h3>椒盐大虾饭</h3>
+                        <p>大虾配米饭</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Gallery -->
+        <section class="gallery">
+            <div class="container">
+                <h2>餐厅环境</h2>
+                <div class="gallery-grid">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600" alt="餐厅内部">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600" alt="餐桌美食">
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=600" alt="餐厅吧台">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600" alt="厨师工作">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>联系方式</h3>
+                    <p>电话: +32 9 398 06 96</p>
+                    <p>邮箱: bentohousegent@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>地址</h3>
+                    <p>Oudburg 40 0001</p>
+                    <p>9000 根特</p>
+                </div>
+                <div class="footer-section">
+                    <h3>营业时间</h3>
+                    <p>12:00 – 22:00</p>
+                    <p>周三休息</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 便当屋 Bento House | 版权所有</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
