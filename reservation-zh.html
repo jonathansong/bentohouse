@@ -58,7 +58,7 @@
 
                         <div class="info-block">
                             <h3>✉️ 邮箱</h3>
-                            <p><a href="mailto:bentohousegent@gmail.com">bentohousegent@gmail.com</a></p>
+                            <p><a href="mailto:songnh@outlook.com">songnh@outlook.com</a></p>
                         </div>
 
                         <div class="info-block">
@@ -104,10 +104,10 @@
                             ❌ 出现了问题。请重试或致电 <a href="tel:+3293980696">+32 9 398 06 96</a>。
                         </div>
                         <form id="reservation-form">
-                            <input type="hidden" name="access_key" value="9d533234-f2ea-4284-8dd2-971bf2cda15c">
+                            <input type="hidden" name="access_key" value="w3f_f58ac354b9ad70ec9255de8a4605e89f0cb9cd917f678cfb">
                             <input type="hidden" name="subject" value="新预订 - Bento House">
                             <input type="hidden" name="from_name" value="Bento House Website">
-                            <input type="checkbox" name="botcheck" style="display:none;">
+                            <input type="hidden" name="_gotcha" style="display:none;">
 
                             <div class="form-group">
                                 <label for="name">姓名 *</label>
@@ -170,7 +170,7 @@
                                 btn.disabled = true;
                                 try {
                                     const data = Object.fromEntries(new FormData(form));
-                                    const response = await fetch('https://api.web3forms.com/submit', {
+                                    const response = await fetch('https://api.w3forms.com/submit', {
                                         method: 'POST',
                                         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                                         body: JSON.stringify(data)
@@ -219,7 +219,7 @@
                 <div class="footer-section">
                     <h3>联系方式</h3>
                     <p>电话: +32 9 398 06 96</p>
-                    <p>邮箱: bentohousegent@gmail.com</p>
+                    <p>邮箱: songnh@outlook.com</p>
                 </div>
                 <div class="footer-section">
                     <h3>地址</h3>
