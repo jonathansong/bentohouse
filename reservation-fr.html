@@ -178,13 +178,19 @@
                                     const result = await response.json();
                                     if (result.success) {
                                         form.style.display = 'none';
-                                        document.getElementById('form-success').style.display = 'block';
+                                        const successEl = document.getElementById('form-success');
+                                        successEl.style.display = 'block';
+                                        successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
                                     } else {
-                                        document.getElementById('form-error').style.display = 'block';
+                                        const errorEl = document.getElementById('form-error');
+                                        errorEl.style.display = 'block';
+                                        errorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
                                         btn.disabled = false;
                                     }
                                 } catch (err) {
-                                    document.getElementById('form-error').style.display = 'block';
+                                    const errorEl = document.getElementById('form-error');
+                                    errorEl.style.display = 'block';
+                                    errorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
                                     btn.disabled = false;
                                 }
                             });
