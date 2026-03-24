@@ -82,7 +82,7 @@
 
                         <div class="info-block">
                             <h3>ℹ️ BTW Nummer</h3>
-                            <p>BE 0763.797.004</p>
+                            <p>BE 1013.503.213</p>
                         </div>
 
                         <div class="info-block social">
@@ -97,7 +97,19 @@
                     <!-- Reservation Form -->
                     <div class="reservation-form">
                         <h2>Reserveer Online</h2>
-                        <form>
+                        <div id="form-success" style="display:none; background:#d4edda; color:#155724; border:1px solid #c3e6cb; border-radius:8px; padding:1.5rem; margin-bottom:1rem;">
+                            ✅ Uw reservering is ontvangen! We nemen zo snel mogelijk contact met u op ter bevestiging.
+                        </div>
+                        <div id="form-error" style="display:none; background:#f8d7da; color:#721c24; border:1px solid #f5c6cb; border-radius:8px; padding:1.5rem; margin-bottom:1rem;">
+                            ❌ Er is iets misgegaan. Probeer het opnieuw of bel ons op <a href="tel:+3293980696">+32 9 398 06 96</a>.
+                        </div>
+                        <form id="reservation-form">
+                            <input type="hidden" name="access_key" value="9d533234-f2ea-4284-8dd2-971bf2cda15c">
+                            <input type="hidden" name="subject" value="Nieuwe reservering - Bento House">
+                            <input type="hidden" name="from_name" value="Bento House Website">
+                            <!-- Honeypot spam protection -->
+                            <input type="checkbox" name="botcheck" style="display:none;">
+
                             <div class="form-group">
                                 <label for="name">Naam *</label>
                                 <input type="text" id="name" name="name" required>
@@ -150,6 +162,34 @@
                         </form>
                         <p class="form-note">* Verplichte velden<br>
                         U ontvangt een bevestiging per email of telefoon.</p>
+
+                        <script>
+                            document.getElementById('reservation-form').addEventListener('submit', async function(e) {
+                                e.preventDefault();
+                                const form = e.target;
+                                const btn = form.querySelector('button[type="submit"]');
+                                btn.disabled = true;
+                                try {
+                                    const data = Object.fromEntries(new FormData(form));
+                                    const response = await fetch('https://api.web3forms.com/submit', {
+                                        method: 'POST',
+                                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                                        body: JSON.stringify(data)
+                                    });
+                                    const result = await response.json();
+                                    if (result.success) {
+                                        form.style.display = 'none';
+                                        document.getElementById('form-success').style.display = 'block';
+                                    } else {
+                                        document.getElementById('form-error').style.display = 'block';
+                                        btn.disabled = false;
+                                    }
+                                } catch (err) {
+                                    document.getElementById('form-error').style.display = 'block';
+                                    btn.disabled = false;
+                                }
+                            });
+                        </script>
                     </div>
                 </div>
             </div>
@@ -199,13 +239,6 @@
         </div>
     </footer>
 
-    <script>
-        // Simple form validation
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Gelieve te reserveren door te bellen naar +32 9 398 06 96');
-            this.reset();
-        });
-    </script>
+
 </body>
 </html>

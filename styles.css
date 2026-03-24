@@ -22,7 +22,7 @@ body {
 header {
     background-color: #1a1a1a;
     color: #fff;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -36,7 +36,7 @@ header .container {
 }
 
 .logo h1 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     color: #ff6b6b;
     font-weight: 700;
 }
@@ -44,7 +44,23 @@ header .container {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 0;
+    align-items: center;
+}
+
+nav li:not(:first-child):not(.language-switcher) {
+    display: flex;
+    align-items: center;
+}
+
+nav li:not(:first-child):not(.language-switcher)::before {
+    content: "｜";
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.language-switcher {
+    margin-left: 1.5rem;
 }
 
 nav a {
@@ -52,7 +68,7 @@ nav a {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 0.6rem;
 }
 
 nav a:hover,
@@ -60,9 +76,7 @@ nav a.active {
     color: #ff6b6b;
 }
 
-.language-switcher {
-    margin-left: auto;
-}
+/* language-switcher margin moved to nav ul block above */
 
 .lang-dropdown {
     background-color: #ff6b6b;
@@ -85,6 +99,10 @@ nav a.active {
     background-color: #fff;
     color: #333;
     padding: 0.5rem;
+}
+
+#dranken .price {
+    display: none;
 }
 
 /* Hero Section */
@@ -348,36 +366,39 @@ nav a.active {
 
 .menu-items {
     display: grid;
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
 .menu-item {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.5rem;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 0;
 }
 
 .menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
     background-color: #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .menu-item-img {
-    width: 80px;
-    height: 80px;
+    width: 100%;
+    height: 250px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 0;
     flex-shrink: 0;
 }
 
 .item-info {
     flex: 1;
     min-width: 0;
+    padding: 1rem 1rem 0.5rem 1rem;
 }
 
 .item-info h3 {
@@ -396,7 +417,9 @@ nav a.active {
     font-weight: 700;
     color: #ff6b6b;
     white-space: nowrap;
-    margin-left: 2rem;
+    margin-left: 0;
+    padding: 0.5rem 1rem 1rem 1rem;
+    align-self: flex-start;
 }
 
 /* Reservation Page Styles */
